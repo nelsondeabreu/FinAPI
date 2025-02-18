@@ -7,7 +7,7 @@ class DeleteUsersController {
     handle(request: Request, response: Response) {
         const { cpf } = request.body;
         this.deleteUsersUseCase.execute(cpf);
-        return response.status(200).json({error: "user deletet with succeful."});
+        return response.status(200).json({message: "user deletet with succeful."});
     }
 }
 
