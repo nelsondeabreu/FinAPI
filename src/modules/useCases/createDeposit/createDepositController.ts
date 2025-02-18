@@ -11,7 +11,7 @@ class CreateDepositController {
 
         this.createDeposituseCase.execute({cpf , amount , description})
         
-        return response.status(200).send()
+        return response.status(200).json({message: "Deposit made successfully "})
     }
 }
 

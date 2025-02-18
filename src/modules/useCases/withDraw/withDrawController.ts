@@ -10,7 +10,7 @@ class WithDrawController {
         const { cpf,description, amount } = request.body;
         this.withdrawUseCase.execute({ cpf, amount , description});
 
-        return response.status(200).send();
+        return response.status(200).json({message: "Withdraw made successfully "});
     
     }
 }

@@ -8,8 +8,8 @@ class BalanceController {
 
     handle(request: Request , response: Response){
         const {cpf}= request.body
-        this.balanceUsecase.execute(cpf);
-        return response.status(200)
+        const balance = this.balanceUsecase.execute(cpf);
+        return response.status(200).json(balance)
     }
 }
 

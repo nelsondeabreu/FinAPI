@@ -6,6 +6,7 @@ import { createDepositController } from "../modules/useCases/createDeposit/index
 import { withdrawController } from "../modules/useCases/withDraw";
 import { balanceController } from "../modules/useCases/balance";
 import { getStatementForDateController } from "../modules/useCases/getStatementForDate"
+import { updateDataUserController } from "../modules/useCases/updateDataUser"
 
 const userRouter = Router()
 
@@ -35,6 +36,10 @@ userRouter.get("/balance", (request: Request , response: Response):any=>{
 
 userRouter.get("/statementfordate", (request: Request, response: Response): any=>{
     return getStatementForDateController.handle(request , response)
+})
+
+userRouter.post("/update" , (request: Request , response: Response): any=>{
+    return updateDataUserController.handle(request , response)
 })
 
 export {userRouter};
