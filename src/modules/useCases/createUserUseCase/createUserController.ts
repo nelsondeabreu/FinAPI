@@ -8,7 +8,7 @@ class CreateUserController {
         const {name , cpf}= request.body
         this.createUserUseCase.execute({name , cpf})
 
-        return response.status(201).send("user created with succeful")
+        return response.status(201).json({message: "user created with succeful"})
     }
 
 }

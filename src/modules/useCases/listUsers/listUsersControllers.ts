@@ -9,7 +9,7 @@ class ListUsersController {
     handle(request: Request , response: Response){
         const users = this.listUsersUseCase.execute();
         
-        return response.status(200).send(users);
+        return response.status(200).json(users);
     }
 }
 

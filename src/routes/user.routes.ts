@@ -7,6 +7,8 @@ import { withdrawController } from "../modules/useCases/withDraw";
 import { balanceController } from "../modules/useCases/balance";
 import { getStatementForDateController } from "../modules/useCases/getStatementForDate"
 import { updateDataUserController } from "../modules/useCases/updateDataUser"
+import { getDataUsersController } from "../modules/useCases/getDataUsers";
+import { deleteUsersController } from "../modules/useCases/deleteUsers";
 
 const userRouter = Router()
 
@@ -38,8 +40,15 @@ userRouter.get("/statementfordate", (request: Request, response: Response): any=
     return getStatementForDateController.handle(request , response)
 })
 
-userRouter.post("/update" , (request: Request , response: Response): any=>{
+userRouter.put("/update" , (request: Request , response: Response): any=>{
     return updateDataUserController.handle(request , response)
 })
 
+userRouter.get("/datauser" , (request: Request , response: Response): any=>{
+    return getDataUsersController.handle(request , response)
+})
+
+userRouter.delete("/delete" , (request: Request , response: Response): any=>{
+    return deleteUsersController.handle(request , response)
+})
 export {userRouter};
