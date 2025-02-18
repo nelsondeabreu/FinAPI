@@ -19,9 +19,9 @@ BackEnd node &amp; typescript de uma API Financeira, usando armazenamento de dad
     -[x] Deve ser possivel realizar um depósito
     -[x] Deve ser possivel realizar um saque
     -[x] Deve ser possivel buscar o extrato bancário do cliente por data
-    -[] Deve ser possivel atualizar os dados da conta do cliente
-    -[] Deve ser possivel obter dados da conta do cliente
-    -[] Deve ser possivel deletar uma conta
+    -[x] Deve ser possivel atualizar os dados da conta do cliente
+    -[x] Deve ser possivel obter dados da conta do cliente
+    -[x] Deve ser possivel deletar uma conta
 
 
 
@@ -32,5 +32,5 @@ BackEnd node &amp; typescript de uma API Financeira, usando armazenamento de dad
     -[x] Não deve ser possivel fazer depósito em uma conta não existente
     -[x] Não deve ser possivel fazer saque em uma conta não existente
     -[x] Não deve ser possivel fazer saque quando o saldo for insuficiente
-    -[] Não deve ser possivel excluir conta não existente
+    -[x] Não deve ser possivel excluir conta não existente
 >>>>>>> 7accdcb (BackEnd FinAPI criado.)
